@@ -15,8 +15,8 @@ public class Lanche {
         int soma = lanche1 + lanche2 + lanche3;
         int media = soma / 3;
 
-        System.out.println("O Número total de lanches = " + soma);
-        System.out.println("A média de lanches = " + media);
+        System.out.println("O numero total de lanches = " + soma);
+        System.out.println("A media de lanches = " + media);
 
         entrada.close();
     }
