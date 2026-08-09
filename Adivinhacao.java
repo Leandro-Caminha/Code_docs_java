@@ -8,14 +8,26 @@ Dica: use Random rand = new Random();
 */
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class Adivinhacao {
     public static void main(String[] args) {
         
         Random rand = new Random();
+        Scanner input = new Scanner(System.in);
 
-        int input = rand.nextInt(10) + 1; // Gera número entre 1 e 10
+        int input_system = rand.nextInt(10) + 1; // Gera um número entre 1 e 10
+        int input_user;
 
-
+        do {
+            System.out.print("Qual numero foi gerado: ");
+            input_user = input.nextInt();
+            if (input_user == input_system) {
+                System.out.println("***ACERTOU***");
+            } else {
+                System.out.println("***ERROU***");
+            }
+        } while (input_system != input_user);
+        input.close();
     }
 }

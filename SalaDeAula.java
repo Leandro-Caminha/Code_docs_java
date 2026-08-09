@@ -13,25 +13,30 @@ import java.util.Scanner;
 public class SalaDeAula {
     public static void main(String[] args) {
         
+        boolean ret = true;
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Digite o numero de alunos para C206/C06: ");
-        int value = input.nextInt();
-
-        switch (value) {
+        while (ret) {
+            System.out.print("Digite o numero de alunos para C206/C06: ");
+            int value = input.nextInt();
+            switch (value) {
             case 10:
                 System.out.println("Sala do aluno - I-16");
+                ret = false;
                 break;
             case 20:
                 System.out.println("Sala do aluno - I-16");
+                ret = false;
                 break;
             case 30:
                 System.out.println("Sala do aluno - I-22");
+                ret = false;
                 break;
             default:
                 System.out.println("OBS.: O numero de alunos deve ser 10, 20 ou 30.");
                 break;
-        }
-        input.close();
+            }
+        }    
+    input.close();
     }
 }
