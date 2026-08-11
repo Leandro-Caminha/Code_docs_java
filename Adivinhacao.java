@@ -20,7 +20,7 @@ public class Adivinhacao {
         int input_user;
 
         do {
-            System.out.print("Qual numero foi gerado: ");
+            System.out.print("Qual numero foi gerado de 1 a 10: ");
             input_user = input.nextInt();
             if (input_user == input_system) {
                 System.out.println("***ACERTOU***");
