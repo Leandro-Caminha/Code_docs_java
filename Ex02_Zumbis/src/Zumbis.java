@@ -1,4 +1,4 @@
-public class Zumbi {
+public class Zumbis {
 
     double vida;
     String nome;
@@ -7,7 +7,7 @@ public class Zumbi {
         return vida;
     }
 
-    public void transfereVida(Zumbi zumbiAlvo, double quantia) {
+    public void transfereVida(Zumbis zumbiAlvo, double quantia) {
         vida -= quantia;
         zumbiAlvo.vida += quantia;
     }
