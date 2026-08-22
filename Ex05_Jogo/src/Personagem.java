@@ -4,7 +4,11 @@ public class Personagem {
     int pontos;
     Arma arma;
 
-    public usarArma(String personagemAlvo, int pontos) {
+    public void tomarDano() {
+            pontos -= 5;
+    }
 
+    public void usarArma() {
+            arma.resistencia -= 2;
     }
 }
