@@ -39,14 +39,14 @@ public class Computador {
     public void mostrarPCConfigs() {
         System.out.format("Marca: %s%n", this.marca);
         System.out.format("Preço: R$%.2f%n", this.preco);
-        System.out.format("Hardware Básico: %s, %.1f%n", hardwareBasico.getNome(),
+        System.out.format("Hardware Básico: %s, %.1f(Mhz/Gb)%n", hardwareBasico.getNome(),
                 hardwareBasico.getCapacidade()
         );
-        System.out.format("Sistema Operacional: %s, %d%n", sistemaOperacional.getNome(),
+        System.out.format("Sistema Operacional: %s, %d(bits)%n", sistemaOperacional.getNome(),
                 sistemaOperacional.getTipo()
         );
         if (memoriaUSB != null) {
-            System.out.format("Memória USB: %s, %d%n",
+            System.out.format("Memória USB: %s, %d(Mhz/Gb)%n",
                     memoriaUSB.getNome(),
                     memoriaUSB.getCapacidade()
             );

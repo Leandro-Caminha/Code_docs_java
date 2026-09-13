@@ -5,7 +5,6 @@ package PCMania.Comercial;
 import PCMania.Clientes.Cliente;
 import PCMania.MemoriaUSB.MemoriaUSB;
 import PCMania.Promocoes.Promocoes;
-
 import java.util.Scanner;
 
 public class Comercial {
@@ -95,45 +94,47 @@ public class Comercial {
     }
 
     public static void escolhaMemoriaUSB(
-            Promocoes promocao1,
-            Promocoes promocao2,
-            Promocoes promocao3,
+            Promocoes[] compra_realizada,
             MemoriaUSB memoriaUSB1,
             MemoriaUSB memoriaUSB2,
             MemoriaUSB memoriaUSB3
     ) {
-        boolean venda_memoriausb = false;
-        int entrada_mememoriausb;
+        for (int i = 0; i < compra_realizada.length; i++) {
 
-        // Entrada de dados: Cliente escolhe se quer memória USB
-        do {
-            System.out.format("Você deseja comprar memória USB ?%n");
-            System.out.format("MEMÓRIA DA PROMOÇÃO: ");
-            entrada_mememoriausb = input.nextInt();
+            boolean venda_memoriausb = false;
+            int entrada_mememoriausb;
 
-            // Condições de escolha da memória USB
-            if (entrada_mememoriausb < 0 || entrada_mememoriausb > 3) {
-                System.out.format("%n");
-                System.out.format("===> PARA COMPRA DE MEMÓRIA:%n");
-                System.out.format("DA PROMOÇÃO 1: Pressione a tecla 1%n");
-                System.out.format("DA PROMOÇÃO 2: Pressione a tecla 2%n");
-                System.out.format("DA PROMOÇÃO 3: Pressione a tecla 3%n");
-                System.out.format("OBS.: Para FINALIZAR SEM COMPRAR MEMÓRIA. Pressione a tecla 0.%n%n");
-            } else if (entrada_mememoriausb == 0) {
-                System.out.format("PARABÉNS, COMPRA FINALIZADA SEM MEMÓRIA USB.%n%n");
-                venda_memoriausb = true;
-            } else {
-                if (entrada_mememoriausb == 1) {
-                    promocao1.getComputador().addMemoriaUSB(memoriaUSB1);
-                } else if (entrada_mememoriausb == 2) {
-                    promocao2.getComputador().addMemoriaUSB(memoriaUSB2);
+            // Entrada de dados: Cliente escolhe se quer memória USB
+            do {
+                System.out.format("Você deseja comprar memória USB para a compra %d ?%n", i + 1);
+                System.out.format("MEMÓRIA DA PROMOÇÃO: ");
+                entrada_mememoriausb = input.nextInt();
+
+                // Condições de escolha da memória USB
+                if (entrada_mememoriausb < 0 || entrada_mememoriausb > 3) {
+                    System.out.format("%n");
+                    System.out.format("===> PARA COMPRA DE MEMÓRIA:%n");
+                    System.out.format("DA PROMOÇÃO 1: Pressione a tecla 1%n");
+                    System.out.format("DA PROMOÇÃO 2: Pressione a tecla 2%n");
+                    System.out.format("DA PROMOÇÃO 3: Pressione a tecla 3%n");
+                    System.out.format(
+                            "OBS.: Para FINALIZAR SEM COMPRAR MEMÓRIA. Pressione a tecla 0.%n%n");
+                } else if (entrada_mememoriausb == 0) {
+                    System.out.format("PARABÉNS, COMPRA FINALIZADA SEM MEMÓRIA USB.%n%n");
+                    venda_memoriausb = true;
                 } else {
-                    promocao3.getComputador().addMemoriaUSB(memoriaUSB3);
+                    if (entrada_mememoriausb == 1) {
+                        compra_realizada[i].getComputador().addMemoriaUSB(memoriaUSB1);
+                    } else if (entrada_mememoriausb == 2) {
+                        compra_realizada[i].getComputador().addMemoriaUSB(memoriaUSB2);
+                    } else {
+                        compra_realizada[i].getComputador().addMemoriaUSB(memoriaUSB3);
+                    }
+                    System.out.format("PARABÉNS, COMPRA FINALIZADA COM MEMÓRIA USB.%n%n");
+                    venda_memoriausb = true;
                 }
-                System.out.format("PARABÉNS, COMPRA FINALIZADA COM MEMÓRIA USB.%n%n");
-                venda_memoriausb = true;
-            }
-        } while (!venda_memoriausb);
+            } while (!venda_memoriausb);
+        }
     }
 
     public static void finalcompra(Promocoes[] compra_realizada) {
@@ -148,13 +149,11 @@ public class Comercial {
         }
     }
 
-    public static void calcularTotalCompra(Promocoes[] compra_realizada) {
-
-        float valorTotal = 0;
-
-        for (int i = 0; i < compra_realizada.length; i++) {
-            valorTotal += compra_realizada[i].getComputador().getPreco();
-        }
+    public static void mostraTotalCompra(float valorTotal) {
         System.out.format("Valor total da compra: R$%.2f%n", valorTotal);
+    }
+
+    public static void closeScanner() {
+        input.close();
     }
 }

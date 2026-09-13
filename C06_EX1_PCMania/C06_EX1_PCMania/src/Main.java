@@ -1,4 +1,5 @@
 // Imports packages
+import PCMania.Clientes.Cliente;
 import PCMania.Comercial.Comercial;
 import PCMania.Computador.Computador;
 import PCMania.MemoriaUSB.MemoriaUSB;
@@ -61,9 +62,7 @@ public class Main {
 
         // Escolha da compra de memória USB
         Comercial.escolhaMemoriaUSB(
-                promocao1,
-                promocao2,
-                promocao3,
+                compra_realizada,
                 memoriaUSB1,
                 memoriaUSB2,
                 memoriaUSB3
@@ -72,10 +71,19 @@ public class Main {
         // Mensagem do final da compra
         Comercial.finalcompra(compra_realizada);
 
-        // Cálculo do valor total da compra
-        Comercial.calcularTotalCompra(compra_realizada);
+        // Converte o objeto Promocoes compra_realizada e um objeto Cliente compra_realizada_total
+        Cliente.setCompraRealizada(compra_realizada);
 
-        // Informações do pedido
+        // Cálcula o valor total da compra
+        Cliente.calculaTotalCompra();
+
+        // Mostra o valor total da compra
+        Comercial.mostraTotalCompra(Cliente.calculaTotalCompra());
+
+        // Informação final do pedido
         ProcessarPedido.pedidoenviado(compra_realizada);
+
+        // Fecha o input utilizado pelo system.in na classe Comercial
+        Comercial.closeScanner();
     }
 }
