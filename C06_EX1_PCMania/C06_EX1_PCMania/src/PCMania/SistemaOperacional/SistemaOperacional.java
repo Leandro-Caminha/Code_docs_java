@@ -4,21 +4,21 @@ package PCMania.SistemaOperacional;
 public class SistemaOperacional {
 
     // Atributos
-    private static String nome;
-    private static int tipo;
+    private final String nome;
+    private final int tipo;
 
     // Construtor
     public SistemaOperacional(String nome, int tipo) {
-        SistemaOperacional.nome = nome;
-        SistemaOperacional.tipo = tipo;
+        this.nome = nome;
+        this.tipo = tipo;
     }
 
     // Métodos
-    public static String getNome() {
+    public String getNome() {
         return nome;
     }
 
-    public static int getTipo() {
+    public int getTipo() {
         return tipo;
     }
 }

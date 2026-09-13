@@ -9,38 +9,51 @@ import PCMania.SistemaOperacional.SistemaOperacional;
 public class Computador {
 
     // Atributos
-    private static String marca;
-    private static float preco;
-    private static HardwareBasico hardwareBasico;
-    private static SistemaOperacional sistemaOperacional;
+    private final String marca;
+    private final float preco;
+    private final HardwareBasico hardwareBasico;
+    private final SistemaOperacional sistemaOperacional;
+    private MemoriaUSB memoriaUSB;
 
     // Construtor
     public Computador(
             String marca,
             float preco,
-            HardwareBasico hardwareBasico,
-            SistemaOperacional sistemaOperacional
+            String nome_hw,
+            float capacidade_hw,
+            String nome_os,
+            int tipo_os
     )
     {
-        Computador.marca = marca;
-        Computador.preco = preco;
-        Computador.hardwareBasico = hardwareBasico;
-        Computador.sistemaOperacional = sistemaOperacional;
+        this.marca = marca;
+        this.preco = preco;
+        this.hardwareBasico = new HardwareBasico(nome_hw,capacidade_hw);
+        this.sistemaOperacional = new SistemaOperacional(nome_os,tipo_os);
     }
 
     // Métodos
+    public float getPreco() {
+        return preco;
+    }
+
     public void mostrarPCConfigs() {
-        System.out.format("Marca: %s%n", Computador.marca);
-        System.out.format("Preço: %f%n", Computador.preco);
-        System.out.format("Hardware Básico: %s, %f%n", HardwareBasico.getNome(),
-                HardwareBasico.getCapacidade()
+        System.out.format("Marca: %s%n", this.marca);
+        System.out.format("Preço: R$%.2f%n", this.preco);
+        System.out.format("Hardware Básico: %s, %.1f%n", hardwareBasico.getNome(),
+                hardwareBasico.getCapacidade()
         );
-        System.out.format("Sistema Operacional: %s, %d%n", SistemaOperacional.getNome(),
-                SistemaOperacional.getTipo()
+        System.out.format("Sistema Operacional: %s, %d%n", sistemaOperacional.getNome(),
+                sistemaOperacional.getTipo()
         );
+        if (memoriaUSB != null) {
+            System.out.format("Memória USB: %s, %d%n",
+                    memoriaUSB.getNome(),
+                    memoriaUSB.getCapacidade()
+            );
+        }
     }
 
     public void addMemoriaUSB(MemoriaUSB musb) {
-        System.out.format("Memória USB: %s, %d%n", MemoriaUSB.getNome(), MemoriaUSB.getCapacidade());
+        this.memoriaUSB = musb;
     }
 }

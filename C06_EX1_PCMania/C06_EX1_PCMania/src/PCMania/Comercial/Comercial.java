@@ -3,9 +3,14 @@ package PCMania.Comercial;
 
 // Imports packages
 import PCMania.Clientes.Cliente;
+import PCMania.MemoriaUSB.MemoriaUSB;
+import PCMania.Promocoes.Promocoes;
+
 import java.util.Scanner;
 
 public class Comercial {
+
+    private static final Scanner input = new Scanner(System.in);
 
     // Construtor
     public Comercial() {
@@ -27,62 +32,61 @@ public class Comercial {
         System.out.format("OBS.: Para FINALIZAR sua compra. Pressione a tecla 0.%n%n");
     }
 
-    public static void escolhaComputador() {
-
-        // Criando um objeto da classe Scanner
-        Scanner input = new Scanner(System.in);
+    public static Promocoes[] escolhaComputador(
+            Promocoes promocao1,
+            Promocoes promocao2,
+            Promocoes promocao3
+    )
+    {
+        // Entrada de dados: Cliente escolhe qual promoção comprar
         int vendas_computador = 0;
         int entrada_computador;
-
-        // Entrada de dados do cliente
-        System.out.format("Qual promoção deseja comprar ?%n");
-        System.out.format("PROMOÇÃO: ");
-        entrada_computador = input.nextInt();
+        Promocoes[] compra_realizada = new Promocoes[100];
+        int index = 0;
 
         // Condições de compra de computadores
-        while (vendas_computador < 2) {
+        do {
+            System.out.format("Qual promoção deseja comprar ?%n");
+            System.out.format("PROMOÇÃO: ");
+            entrada_computador = input.nextInt();
+
             if (entrada_computador == 0) {
-                System.out.format(
-                        "ATENÇÃO: Você deve comprar no mínimo 2 computadores.%n%n");
-            } else if (entrada_computador < 0 || entrada_computador > 3) {
+                if (vendas_computador < 2) {
+                    System.out.format(
+                            "ATENÇÃO: Você deve comprar no mínimo 2 computadores.%n%n");
+                }
+            } else if (entrada_computador < 1 || entrada_computador > 3) {
                 System.out.format("%n");
                 System.out.format("===> INSTRUÇÕES DE COMPRA:%n");
                 System.out.format("PARA COMPRAR A PROMOÇÃO 1. Pressione a tecla 1%n");
                 System.out.format("PARA COMPRAR A PROMOÇÃO 2. Pressione a tecla 2%n");
                 System.out.format("PARA COMPRAR A PROMOÇÃO 3. Pressione a tecla 3%n");
-                System.out.format(
-                        "OBS.: Para FINALIZAR a compra. Pressione a tecla 0.%n%n");
+                System.out.format("OBS.: Para FINALIZAR a compra. Pressione a tecla 0.%n");
             } else {
+                if (entrada_computador == 1) {
+                    compra_realizada[index] = promocao1;
+                } else if (entrada_computador == 2) {
+                    compra_realizada[index] = promocao2;
+                } else {
+                    compra_realizada[index] = promocao3;
+                }
+                index++;
                 vendas_computador++;
             }
-            System.out.format("Qual promoção deseja comprar ?%n");
-            System.out.format("PROMOÇÃO: ");
-            entrada_computador = input.nextInt();
-        }
+        } while (vendas_computador < 2 || entrada_computador != 0);
+        System.out.format("PARABÉNS, COMPUTADOR(S) ESCOLHIDO(S).%n%n");
 
-        if (entrada_computador == 0) {
-            System.out.format("PARABÉNS, COMPUTADOR(S) ESCOLHIDO(S).%n%n");
-        } else {
-            do {
-                System.out.format("Qual promoção deseja comprar ?%n");
-                System.out.format("PROMOÇÃO: ");
-                entrada_computador = input.nextInt();
-                if (entrada_computador < 0 || entrada_computador > 3) {
-                    System.out.format("%n");
-                    System.out.format("===> INSTRUÇÕES DE COMPRA:%n");
-                    System.out.format("PARA COMPRAR A PROMOÇÃO 1. Pressione a tecla 1%n");
-                    System.out.format("PARA COMPRAR A PROMOÇÃO 2. Pressione a tecla 2%n");
-                    System.out.format("PARA COMPRAR A PROMOÇÃO 3. Pressione a tecla 3%n");
-                    System.out.format("OBS.: Para FINALIZAR a compra. Pressione a tecla 0.%n");
-                }
-            } while (entrada_computador != 0);
-            System.out.format("PARABÉNS, COMPUTADOR(S) ESCOLHIDO(S).%n%n");
-            input.close();
+        // Ajustando o tamanho do array compra_realizada
+        Promocoes[] compras_finais = new Promocoes[vendas_computador];
+
+        for (int i = 0; i < vendas_computador; i++) {
+            compras_finais[i] = compra_realizada[i];
         }
+        compra_realizada = compras_finais;
+        return compra_realizada;
     }
 
     public static void instrucaoCompraMemoriaUSB() {
-        System.out.format("===> Você deseja comprar memória USB ?%n");
         System.out.format("===> PARA COMPRA DE MEMÓRIA:%n");
         System.out.format("DA PROMOÇÃO 1: Pressione a tecla 1%n");
         System.out.format("DA PROMOÇÃO 2: Pressione a tecla 2%n");
@@ -90,18 +94,24 @@ public class Comercial {
         System.out.format("OBS.: Para FINALIZAR SEM A COMPRA DE MEMÓRIA. Pressione a tecla 0.%n%n");
     }
 
-    public static void escolhaMemoriaUSB() {
-
-        // Criando um objeto da classe Scanner
-        Scanner input = new Scanner(System.in);
+    public static void escolhaMemoriaUSB(
+            Promocoes promocao1,
+            Promocoes promocao2,
+            Promocoes promocao3,
+            MemoriaUSB memoriaUSB1,
+            MemoriaUSB memoriaUSB2,
+            MemoriaUSB memoriaUSB3
+    ) {
         boolean venda_memoriausb = false;
         int entrada_mememoriausb;
 
-        // Condições de compra da Memórias USB
+        // Entrada de dados: Cliente escolhe se quer memória USB
         do {
             System.out.format("Você deseja comprar memória USB ?%n");
             System.out.format("MEMÓRIA DA PROMOÇÃO: ");
             entrada_mememoriausb = input.nextInt();
+
+            // Condições de escolha da memória USB
             if (entrada_mememoriausb < 0 || entrada_mememoriausb > 3) {
                 System.out.format("%n");
                 System.out.format("===> PARA COMPRA DE MEMÓRIA:%n");
@@ -113,10 +123,38 @@ public class Comercial {
                 System.out.format("PARABÉNS, COMPRA FINALIZADA SEM MEMÓRIA USB.%n%n");
                 venda_memoriausb = true;
             } else {
+                if (entrada_mememoriausb == 1) {
+                    promocao1.getComputador().addMemoriaUSB(memoriaUSB1);
+                } else if (entrada_mememoriausb == 2) {
+                    promocao2.getComputador().addMemoriaUSB(memoriaUSB2);
+                } else {
+                    promocao3.getComputador().addMemoriaUSB(memoriaUSB3);
+                }
                 System.out.format("PARABÉNS, COMPRA FINALIZADA COM MEMÓRIA USB.%n%n");
                 venda_memoriausb = true;
             }
         } while (!venda_memoriausb);
-        input.close();
+    }
+
+    public static void finalcompra(Promocoes[] compra_realizada) {
+        System.out.format("===> COMPRA FINALIZADA COM SUCESSO !!!%n");
+        System.out.format("Nome do cliente: %s%n", Cliente.getNome());
+        System.out.format("CPF: %s%n%n", Cliente.getCpf());
+        System.out.format("===> COMPUTADORES ADQUIRIDOS:%n");
+
+        for (int i = 0; i < compra_realizada.length; i++) {
+            compra_realizada[i].getComputador().mostrarPCConfigs();
+            System.out.format("%n");
+        }
+    }
+
+    public static void calcularTotalCompra(Promocoes[] compra_realizada) {
+
+        float valorTotal = 0;
+
+        for (int i = 0; i < compra_realizada.length; i++) {
+            valorTotal += compra_realizada[i].getComputador().getPreco();
+        }
+        System.out.format("Valor total da compra: R$%.2f%n", valorTotal);
     }
 }

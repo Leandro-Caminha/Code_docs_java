@@ -4,21 +4,22 @@ package PCMania.MemoriaUSB;
 public class MemoriaUSB {
 
     // Atributos
-    private static String nome;
-    private static int capacidade;
+    private final String nome;
+    private final int capacidade;
 
     // Construtor
     public MemoriaUSB(String nome, int capacidade) {
-        MemoriaUSB.nome = nome;
-        MemoriaUSB.capacidade = capacidade;
+        this.nome = nome;
+        this.capacidade = capacidade;
     }
 
     // Métodos
-    public static String getNome() {
+
+    public String getNome() {
         return nome;
     }
 
-    public static int getCapacidade() {
+    public int getCapacidade() {
         return capacidade;
     }
 }
