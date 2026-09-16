@@ -19,15 +19,15 @@ public class Computador {
     public Computador(
             String marca,
             float preco,
-            String nome_hw,
-            float capacidade_hw,
+            String nome_hardware,
+            float capacidade_hardware,
             String nome_os,
             int tipo_os
     )
     {
         this.marca = marca;
         this.preco = preco;
-        this.hardwareBasico = new HardwareBasico(nome_hw,capacidade_hw);
+        this.hardwareBasico = new HardwareBasico(nome_hardware, capacidade_hardware);
         this.sistemaOperacional = new SistemaOperacional(nome_os,tipo_os);
     }
 
@@ -42,11 +42,14 @@ public class Computador {
         System.out.format("Hardware Básico: %s, %.1f(Mhz/Gb)%n", hardwareBasico.getNome(),
                 hardwareBasico.getCapacidade()
         );
-        System.out.format("Sistema Operacional: %s, %d(bits)%n", sistemaOperacional.getNome(),
+        System.out.format(
+                "Sistema Operacional: %s, %d(bits)%n",
+                sistemaOperacional.getNome(),
                 sistemaOperacional.getTipo()
         );
         if (memoriaUSB != null) {
-            System.out.format("Memória USB: %s, %d(Mhz/Gb)%n",
+            System.out.format(
+                    "Memória USB: %s, %d(Mhz/Gb)%n",
                     memoriaUSB.getNome(),
                     memoriaUSB.getCapacidade()
             );

@@ -69,7 +69,7 @@ public class Main {
         );
 
         // Mensagem do final da compra
-        Comercial.finalcompra(compra_realizada);
+        Comercial.finalCompra(compra_realizada);
 
         // Converte o objeto Promocoes compra_realizada e um objeto Cliente compra_realizada_total
         Cliente.setCompraRealizada(compra_realizada);
