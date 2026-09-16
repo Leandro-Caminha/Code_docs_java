@@ -26,6 +26,7 @@ Conclusão do uso de IA:
 
 Experiência satisfatória. Ajudou a trazer um entendimento, mas também causa confusão nos assuntos.
 Pois as vezes traz conceitos ao qual complicam o entendimento e que ainda não foram abordados.
-Desta forma foi preciso procurar alguns videos no Youtube para trazer melhor os conceitos aplicados.
+Desta forma foi preciso rever os slides de aulas anteriores e procurar alguns videos no Youtube para
+trazer melhor os conceitos aplicados.
 E após assistir os videos, foi possível filtrar melhor as sugestões trazidas pela IA.
 ----------------------------------------------------------------------------------------------------
