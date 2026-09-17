@@ -7,7 +7,7 @@ import PCMania.Computador.Computador;
 public class Promocoes {
 
     // Atributos
-    private final  Computador computador;
+    private final Computador computador;
 
     // Construtor
     public Promocoes(Computador computador) {

@@ -98,7 +98,8 @@ public class Comercial {
             MemoriaUSB memoriaUSB1,
             MemoriaUSB memoriaUSB2,
             MemoriaUSB memoriaUSB3
-    ) {
+    )
+    {
         for (int i = 0; i < compra_realizada.length; i++) {
 
             boolean venda_memoriausb = false;
@@ -137,7 +138,7 @@ public class Comercial {
         }
     }
 
-    public static void finalcompra(Promocoes[] compra_realizada) {
+    public static void finalCompra(Promocoes[] compra_realizada) {
         System.out.format("===> COMPRA FINALIZADA COM SUCESSO !!!%n");
         System.out.format("Nome do cliente: %s%n", Cliente.getNome());
         System.out.format("CPF: %s%n%n", Cliente.getCpf());
