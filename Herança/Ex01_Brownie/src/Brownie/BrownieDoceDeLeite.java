@@ -9,5 +9,6 @@ public class BrownieDoceDeLeite extends Brownie{
 
     // Métodos
     public void adicionaDoceDeLeite() {
+        System.out.format("Item adicionado: %s\n", nome);
     }
 }
