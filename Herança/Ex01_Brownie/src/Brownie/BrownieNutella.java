@@ -8,7 +8,7 @@ public class BrownieNutella extends Brownie {
     }
 
     // Métodos
-    public void adicionaNutrlla() {
+    public void adicionaNutella() {
         System.out.format("Item adicionado: %s\n", nome);
     }
 }

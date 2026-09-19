@@ -21,12 +21,12 @@ public class Brownie {
 
     public void calculaValorTotalCompra() {
         System.out.format("Nome: %s\n", nome);
-        System.out.format("Preço: %f\n", preco);
+        System.out.format("Preço: %.2f\n\n", preco);
     }
 
     public void mostraInfo() {
         System.out.format("Nome: %s\n", nome);
-        System.out.format("Preço: %f\n", preco);
-        System.out.format("Nome: %s\n", sabor);
+        System.out.format("Preço: %.2f\n", preco);
+        System.out.format("Sabor: %s\n\n", sabor);
     }
 }
