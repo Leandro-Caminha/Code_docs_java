@@ -18,21 +18,20 @@ OBS.: Agregação: Cantina <>--- Salgado
       Salgado: Array 1..*
  */
 
-package br.inatel.cdg.exercicio0;
+// Packages
+package Ex0_Cantina;
+
+// Imports
+import Ex0_Cantina.Cantina.Cantina;
+import Ex0_Cantina.Salgado.Salgado;
 
 public class Main {
     public static void main(String[] args) {
 
-        Cantina cantina = new Cantina();
-        cantina.nome = "Cantina do Inatel";
-
-        Salgado salgado1 = new Salgado();
-        Salgado salgado2 = new Salgado();
-        Salgado salgado3 = new Salgado();
-
-        salgado1.nome = "Coxinha";
-        salgado2.nome = "Esfirra";
-        salgado3.nome = "Enroladinho";
+        Cantina cantina = new Cantina("Cantina do Inatel");
+        Salgado salgado1 = new Salgado("Kibe");
+        Salgado salgado2 = new Salgado("Croquete");
+        Salgado salgado3 = new Salgado("Empada");
 
         cantina.addSalgados(salgado1);
         cantina.addSalgados(salgado2);
