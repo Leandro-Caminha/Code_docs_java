@@ -17,10 +17,12 @@ Faça os seguintes testes:
 -> Existem dois tipos de asteroides: Pequeno e Grande
 -> A nave possui dois tipos de tiro: Normal e Explosivo
 -> Asteroides do tipo “Grande” são destruídos apenas com Naves que possuem um tipo de tiro
--> “Explosivo”
+“Explosivo”
 -> Se o Asteroide for destruído, ele chama o método destruir(), que apenas imprime uma mensagem
 
-OBS: No diagrama de classes UML, quando temos uma seta, é uma relação de dependência. Assim, Nave depende de Asteroide. Pois um método da classe Nave, recebe uma variável do tipo Asteroide. Mas não temos um membro na classe Nave do tipo Asteroide, por isso não temos uma agregação e/ou composição!
+OBS: No diagrama de classes UML, quando temos uma seta, é uma relação de dependência.
+Assim, Nave depende de Asteroide. Pois um método da classe Nave, recebe uma variável do tipo Asteroide.
+Mas não temos um membro na classe Nave do tipo Asteroide, por isso não temos uma agregação e/ou composição!
 
 ESPECIFICAÇÕES DO DIAGRAMA UML (Space Shooter)
 
@@ -49,6 +51,7 @@ ESPECIFICAÇÕES DO DIAGRAMA UML (Space Shooter)
 * - Dependência: Nave ➔ Asteroide (A Nave depende de Asteroide como parâmetro no método atirar)
 
  */
+
 public class Main {
     public static void main(String[] args) {
 
@@ -59,5 +62,9 @@ public class Main {
         Asteroide asteroidePequeno = new Asteroide("Asteroide Pequeno", "pequeno");
         Asteroide asteroideGrande = new Asteroide("Asteroide Grande", "grande");
 
+        naveNormal.atirar(asteroidePequeno);
+        naveNormal.atirar(asteroideGrande);
+        naveGrande.atirar(asteroidePequeno);
+        naveGrande.atirar(asteroideGrande);
         }
     }

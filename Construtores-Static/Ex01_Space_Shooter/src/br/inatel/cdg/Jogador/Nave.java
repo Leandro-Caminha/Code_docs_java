@@ -19,6 +19,13 @@ public class Nave {
     }
 
     // Métodos
-    public void atirar(Asteroide ast) {
+    public void atirar(Asteroide asteroide) {
+        if (tipoTiro.equals("normal") && asteroide.getTipoAsteroide().equals("pequeno")) {
+            asteroide.destruir();
+        } else if (tipoTiro.equals("explosivo")) {
+            asteroide.destruir();
+        } else {
+            System.out.println("Asteroide muito grande para destruir.");
+        }
     }
 }

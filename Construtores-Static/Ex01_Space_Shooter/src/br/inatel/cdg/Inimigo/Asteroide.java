@@ -15,6 +15,10 @@ public class Asteroide {
 
     // Métodos
     public void destruir() {
-        System.out.format("Asteroide %s destruído", tipoAsteroide);
+        System.out.format("Asteroide %s destruído%n", tipoAsteroide);
+    }
+
+    public String getTipoAsteroide() {
+        return tipoAsteroide;
     }
 }
