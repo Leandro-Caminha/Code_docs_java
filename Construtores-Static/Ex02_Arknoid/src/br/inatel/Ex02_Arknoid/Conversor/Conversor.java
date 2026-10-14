@@ -1,11 +1,10 @@
+// Packages
 package br.inatel.Ex02_Arknoid.Conversor;
 
 public class Conversor {
 
-    public static int convert(int pontos) {
-        int moedas = 0;
-
-         moedas = pontos * 100;
-         return moedas;
+    public static void convert(String jogador, int pontos) {
+        System.out.format("Total de pontos do jogador: %d\n", pontos);
+        System.out.format("Total de moedas do %s: %d\n", jogador, (pontos * 100));
     }
 }

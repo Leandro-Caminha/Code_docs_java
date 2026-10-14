@@ -1,12 +1,22 @@
+// Packages
 package br.inatel.Ex02_Arknoid.Jogador;
 
 public class Jogador {
 
     // Atributos
-    String jogador;
+    private String jogador;
+    private int pontos = 0;
 
     // Construtor
-    public Jogador(String jogador) {
-        this.jogador = jogador;
+    public Jogador() {
+    }
+
+    // Métodos
+    public void pontuacao() {
+        pontos++;
+    }
+
+    public int getPontos() {
+        return pontos;
     }
 }
