@@ -1,15 +1,11 @@
 // Packages
 package br.inatel.Ex02_Arknoid.Bloco;
 
-// Imports
-import br.inatel.Ex02_Arknoid.Jogador.Jogador;
-
 public class Bloco {
 
     // Atributos
-    private String bloco;
-    private int contBlocos = 0;
-    private int contBlocosDestruidos = 0;
+    private static int contBlocos = 0;
+    private static int contBlocosDestruidos = 0;
 
 
     // Construtor
@@ -18,17 +14,15 @@ public class Bloco {
     }
 
     // Métodos
-    public void destruirBloco(Jogador jogador, Bloco bloco) {
-        System.out.format("O %s destruiu o bloco %s\n", jogador, bloco);
+    public void getContBlocos() {
+        System.out.format("Total de blocos criados: %d\n", contBlocos);
+    }
+
+    public void setContBlocosDestruidos() {
         contBlocosDestruidos++;
-        jogador.pontuacao();
     }
 
-    public int getContBlocos() {
-        return contBlocos;
-    }
-
-    public int getContBlocosDestruidos() {
-        return contBlocosDestruidos;
+    public void getContBlocosDestruidos() {
+        System.out.format("Total de blocos destruídos: %d\n", contBlocosDestruidos);
     }
 }

@@ -11,7 +11,9 @@ Crie um método estático em uma classe Conversor que converte a pontuação do 
 
  */
 
+// Imports
 import br.inatel.Ex02_Arknoid.Bloco.Bloco;
+import br.inatel.Ex02_Arknoid.Conversor.Conversor;
 import br.inatel.Ex02_Arknoid.Jogador.Jogador;
 
 public class Main {
@@ -27,7 +29,19 @@ public class Main {
         Bloco bloco4 = new Bloco();
         Bloco bloco5 = new Bloco();
         Bloco bloco6 = new Bloco();
-        Bloco bloco7 = new Bloco();
 
+        jogador1.destruirBloco("Jogador1", bloco1);
+        jogador2.destruirBloco("Jogador2", bloco2);
+        jogador3.destruirBloco("Jogador3", bloco3);
+        jogador1.destruirBloco("Jogador1", bloco4);
+        jogador2.destruirBloco("Jogador2", bloco5);
+        jogador3.destruirBloco("Jogador3", bloco6);
+
+        Conversor.convert("Jogador1", jogador1.getPontos());
+        Conversor.convert("Jogador2", jogador2.getPontos());
+        Conversor.convert("Jogador3", jogador2.getPontos());
+
+        bloco1.getContBlocos();
+        bloco2.getContBlocosDestruidos();
     }
 }
