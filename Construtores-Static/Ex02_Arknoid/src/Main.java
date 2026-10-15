@@ -12,9 +12,9 @@ Crie um método estático em uma classe Conversor que converte a pontuação do 
  */
 
 // Imports
-import br.inatel.Ex02_Arknoid.Bloco.Bloco;
-import br.inatel.Ex02_Arknoid.Conversor.Conversor;
-import br.inatel.Ex02_Arknoid.Jogador.Jogador;
+import br.inatel.ex02_arknoid.Bloco.Bloco;
+import br.inatel.ex02_arknoid.Conversor.Conversor;
+import br.inatel.ex02_arknoid.Jogador.Jogador;
 
 public class Main {
     public static void main(String[] args) {

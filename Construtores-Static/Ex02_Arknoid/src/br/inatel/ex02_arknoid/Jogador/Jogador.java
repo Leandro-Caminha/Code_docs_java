@@ -1,8 +1,8 @@
 // Packages
-package br.inatel.Ex02_Arknoid.Jogador;
+package br.inatel.ex02_arknoid.Jogador;
 
 // Imports
-import br.inatel.Ex02_Arknoid.Bloco.Bloco;
+import br.inatel.ex02_arknoid.Bloco.Bloco;
 
 public class Jogador {
 

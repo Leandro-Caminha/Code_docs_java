@@ -1,5 +1,5 @@
 // Packages
-package br.inatel.Ex02_Arknoid.Conversor;
+package br.inatel.ex02_arknoid.Conversor;
 
 public class Conversor {
 

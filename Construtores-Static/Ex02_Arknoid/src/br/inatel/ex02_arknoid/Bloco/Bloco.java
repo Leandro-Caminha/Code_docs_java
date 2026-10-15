@@ -1,5 +1,5 @@
 // Packages
-package br.inatel.Ex02_Arknoid.Bloco;
+package br.inatel.ex02_arknoid.Bloco;
 
 public class Bloco {
 
