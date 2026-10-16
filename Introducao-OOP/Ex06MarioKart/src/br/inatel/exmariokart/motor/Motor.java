@@ -21,7 +21,7 @@ public class Motor {
     }
 
     public void mostraInfo() {
-        System.out.format("Cilindradas: %s", this.cilindradas);
-        System.out.format("Velocidade: %f", this.velocidadeMaxima);
+        System.out.format("Cilindradas: %s%n", this.cilindradas);
+        System.out.format("Velocidade: %.2f%n", this.velocidadeMaxima);
     }
 }

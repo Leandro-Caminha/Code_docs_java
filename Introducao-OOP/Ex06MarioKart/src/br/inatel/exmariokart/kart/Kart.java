@@ -1,11 +1,15 @@
 // Packages
 package br.inatel.exmariokart.kart;
 
+// Imports
+import br.inatel.exmariokart.motor.Motor;
+import br.inatel.exmariokart.piloto.Piloto;
+
 public class Kart {
 
     // Atributos
     private String nome;
-    private Motor motor;
+    private final Motor motor;
     private Piloto piloto;
 
     // Construtor
@@ -18,10 +22,6 @@ public class Kart {
         this.nome = nome;
     }
 
-    public void setMotor(Motor motor) {
-        this.motor = motor;
-    }
-
     public Motor getMotor() {
         return motor;
     }
@@ -30,15 +30,21 @@ public class Kart {
         this.piloto = piloto;
     }
 
-    public void pular() {
-        System.out.format("O Carro %s esta pulando!", this.nome);
+        public void pular() {
+        System.out.format("O kart %s esta pulando!%n", this.nome);
     }
 
-    void soltarTurbo(){
-        System.out.format("O Carro %s esta soltando turbo!", this.nome);
+    public void soltarTurbo(){
+        System.out.format("O kart %s pilotado pelo %s esta soltando turbo!%n",
+                this.nome,
+                piloto.getNome()
+        );
     }
 
-    void fazerDrift() {
-        System.out.format("O Carro %s esta fazendo drift!", this.nome);
+    public void fazerDrift() {
+        System.out.format("O kart %s pilotado pelo %s esta fazendo drift!%n",
+                this.nome,
+                piloto.getNome()
+        );
     }
 }

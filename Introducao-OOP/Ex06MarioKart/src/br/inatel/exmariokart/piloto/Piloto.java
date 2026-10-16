@@ -16,7 +16,11 @@ public class Piloto {
         this.nome = nome;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
     public void soltaSuperPoder(){
-        System.out.format("O Piloto %s lançou um super poder.", this.nome);
+        System.out.format("O Piloto %s lançou um super poder.%n", this.nome);
     }
 }

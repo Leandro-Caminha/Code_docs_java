@@ -37,23 +37,25 @@ public class Main {
 
         Kart kart1 = new Kart();
         kart1.setNome("Kart1");
-        kart1.setMotor(). = "150";
-        kart1.motor.velocidadeMaxima = 95.20f;
-        kart1.piloto = piloto1;
+        kart1.getMotor().setCilindradas("150");
+        kart1.getMotor().setVelocidadeMaxima(95.20f);
+        kart1.setPiloto(piloto1);
 
         Kart kart2 = new Kart();
-        kart2.nome = "Kart2";
-        kart2.motor.cilindradas = "50";
-        kart2.motor.velocidadeMaxima = 76.10f;
-        kart2.piloto = piloto2;
+        kart2.setNome("Kart2");
+        kart2.getMotor().setCilindradas("50");
+        kart2.getMotor().setVelocidadeMaxima(76.10f);
+        kart2.setPiloto(piloto2);
 
         piloto1.soltaSuperPoder();
         piloto2.soltaSuperPoder();
 
+        kart1.pular();
         kart1.fazerDrift();
-        kart1.motor.mostraInfo();
+        kart1.getMotor().mostraInfo();
 
+        kart2.pular();
         kart2.soltarTurbo();
-        kart2.motor.mostraInfo();
+        kart2.getMotor().mostraInfo();
     }
 }
