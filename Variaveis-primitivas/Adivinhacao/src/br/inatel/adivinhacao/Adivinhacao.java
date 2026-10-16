@@ -25,12 +25,12 @@ public class Adivinhacao {
         int input_user;
 
         do {
-            System.out.print("Qual numero foi gerado de 1 a 10: ");
+            System.out.format("Qual numero foi gerado de 1 a 10: ");
             input_user = input.nextInt();
             if (input_user == input_system) {
-                System.out.println("***ACERTOU***");
+                System.out.format("***ACERTOU***");
             } else {
-                System.out.println("***ERROU***");
+                System.out.format("***ERROU***");
             }
         } while (input_system != input_user);
         input.close();
