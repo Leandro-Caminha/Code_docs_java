@@ -1,5 +1,5 @@
 /*
-Exercício 1 – Campo Minado (Desafio)
+Exercício 01 – Campo Minado (Desafio)
 
 -> Simule um jogo de campo minado, através de uma matriz 2x2.
 
@@ -10,24 +10,29 @@ Exercício 1 – Campo Minado (Desafio)
 mas agora já saberá onde tem uma mina.
 
 Random rand = new Random();
-// Gera num aleatório entre 0 e 1
+---> Gera num aleatório entre 0 e 1
 int x = rand.nextInt(2);
 
-// Para ler do teclado a posição digitada
+---> Para ler do teclado a posição digitada
 Scanner entrada = new Scanner(System.in);
 int digitado = entrada.nextInt();
  */
 
+
+// Packages
+package br.inatel.excampominado.main;
+
+// Imports
+import br.inatel.excampominado.jogador.Jogador;
+import br.inatel.excampominado.jogo.Jogo;
+
 public class Main {
     public static void main(String[] args) {
 
-        // Criando o objeto da classe Jogador
         Jogador jogador = new Jogador();
 
-        // Criando o objeto da classe Jogo
         Jogo jogo = new Jogo(jogador);
 
-        // Iniciando o jogo
         jogo.iniciarJogo();
     }
 }

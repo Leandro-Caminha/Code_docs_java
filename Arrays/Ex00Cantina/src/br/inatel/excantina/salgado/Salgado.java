@@ -1,5 +1,5 @@
 // Packages
-package Ex0_Cantina.Salgado;
+package br.inatel.excantina.salgado;
 
 public class Salgado {
 

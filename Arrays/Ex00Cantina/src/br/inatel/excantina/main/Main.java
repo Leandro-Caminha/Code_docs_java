@@ -1,5 +1,5 @@
 /*
-Exercício 0
+Exercício 00
 -> Crie classes em Java que atendam as especificações UML abaixo. Crie uma classe Main e, nela,
 crie:
 
@@ -18,17 +18,19 @@ OBS.: Agregação: Cantina <>--- Salgado
       Salgado: Array 1..*
  */
 
+
 // Packages
-package Ex0_Cantina;
+package br.inatel.excantina.main;
 
 // Imports
-import Ex0_Cantina.Cantina.Cantina;
-import Ex0_Cantina.Salgado.Salgado;
+import br.inatel.excantina.cantina.Cantina;
+import br.inatel.excantina.salgado.Salgado;
 
 public class Main {
     public static void main(String[] args) {
 
         Cantina cantina = new Cantina("Cantina do Inatel");
+
         Salgado salgado1 = new Salgado("Kibe");
         Salgado salgado2 = new Salgado("Croquete");
         Salgado salgado3 = new Salgado("Empada");

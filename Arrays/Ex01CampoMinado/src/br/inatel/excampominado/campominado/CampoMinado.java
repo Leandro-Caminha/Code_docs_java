@@ -1,27 +1,33 @@
+// Packages
+package br.inatel.excampominado.campominado;
+
+// Imports
+import br.inatel.excampominado.bomba.Bomba;
 import java.util.Random;
 
 public class CampoMinado {
 
+    // Atributos
     private boolean[][] campo;
-    private Bomba bomba;
-    private String[] mensagens;
+    private final Bomba bomba;
+    private final String[] mensagens;
 
+    // Construtor
     public CampoMinado() {
-
         campo = new boolean[2][2];
         mensagens = new String[2];
         mensagens[0] = "Você está seguro! Continue jogando!";
         mensagens[1] = "Bomba descoberta! EXPLODIU... Continue jogando!";
 
-        // Criando o objeto da classe Random
         Random random = new Random();
+
         int linha = random.nextInt(2);
         int coluna = random.nextInt(2);
 
-        // Criando o objeto da classe Bomba na classe CampoMinado
         bomba = new Bomba(linha, coluna);
     }
 
+    // Métodos
     public boolean possuiBomba(int linha, int coluna) {
         return linha == bomba.getLinha() && coluna == bomba.getColuna();
     }

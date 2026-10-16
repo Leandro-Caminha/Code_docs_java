@@ -1,14 +1,14 @@
 // Packages
-package Ex0_Cantina.Cantina;
+package br.inatel.excantina.cantina;
 
 // Imports
-import Ex0_Cantina.Salgado.Salgado;
+import br.inatel.excantina.salgado.Salgado;
 
 public class Cantina {
 
     // Atributos
     public String nome;
-    Salgado[] salgados = new Salgado[10];
+    private final Salgado[] salgados = new Salgado[10];
 
     // Construtor
     public Cantina(String nome) {
@@ -26,7 +26,8 @@ public class Cantina {
     }
 
     public void mostraInfo() {
-        System.out.format("A %s possui os seguintes salgados: %n", nome);
+        System.out.format("A %s possui os seguintes salgados: %n", this.nome);
+
         for (Salgado salgado : salgados) {
             if(salgado != null)
                 System.out.println(salgado.nome);
