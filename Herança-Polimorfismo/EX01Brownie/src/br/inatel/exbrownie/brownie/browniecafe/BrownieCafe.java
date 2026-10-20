@@ -11,6 +11,6 @@ public class BrownieCafe extends Brownie {
 
     // Métodos
     public void adicionaCafe() {
-        System.out.format("Item adicionado: %s\n", nome);
+        System.out.printf("Item adicionado: %s%n", this.nome);
     }
 }

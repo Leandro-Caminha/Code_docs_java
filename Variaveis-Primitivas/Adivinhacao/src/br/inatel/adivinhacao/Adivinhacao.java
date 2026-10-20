@@ -1,5 +1,5 @@
 /*
-Exercício 5 – Adivinhação!
+Exercício 05 – Adivinhação!
 Faça um programa que gere um número aleatório entre 1 e 10, e depois pergunte ao usuário.
 Qual número foi gerado. O jogo deve continuar até que o usuário adivinhe o número.
 
@@ -28,9 +28,9 @@ public class Adivinhacao {
             System.out.format("Qual numero foi gerado de 1 a 10: ");
             input_user = input.nextInt();
             if (input_user == input_system) {
-                System.out.format("***ACERTOU***");
+                System.out.println("***ACERTOU***");
             } else {
-                System.out.format("***ERROU***");
+                System.out.println("***ERROU***");
             }
         } while (input_system != input_user);
         input.close();

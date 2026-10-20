@@ -14,6 +14,6 @@ public class Cachorro extends Mamifero {
     // Métodos
     @Override
     public void emitirSom() {
-        System.out.format("Auauauauauau...%n%n");
+        System.out.println("Auauauauauau...%n%n");
     }
 }

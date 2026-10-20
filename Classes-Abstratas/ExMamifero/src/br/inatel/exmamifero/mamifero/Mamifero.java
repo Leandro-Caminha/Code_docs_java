@@ -17,7 +17,7 @@ public abstract class Mamifero {
     public abstract void emitirSom();
 
     public void mostraInfo() {
-        System.out.format("Nome do mamífero: %s%n", this.nome);
-        System.out.format("Nome do mamífero: %.2f%n%n", this.vida);
+        System.out.printf("Nome do mamífero: %s%n", this.nome);
+        System.out.printf("Nome do mamífero: %.2f%n%n", this.vida);
     }
 }

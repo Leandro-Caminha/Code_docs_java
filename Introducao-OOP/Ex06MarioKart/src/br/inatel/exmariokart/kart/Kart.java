@@ -31,18 +31,18 @@ public class Kart {
     }
 
         public void pular() {
-        System.out.format("O kart %s esta pulando!%n", this.nome);
+        System.out.printf("O kart %s esta pulando!%n", this.nome);
     }
 
     public void soltarTurbo(){
-        System.out.format("O kart %s pilotado pelo %s esta soltando turbo!%n",
+        System.out.printf("O kart %s pilotado pelo %s esta soltando turbo!%n",
                 this.nome,
                 piloto.getNome()
         );
     }
 
     public void fazerDrift() {
-        System.out.format("O kart %s pilotado pelo %s esta fazendo drift!%n",
+        System.out.printf("O kart %s pilotado pelo %s esta fazendo drift!%n",
                 this.nome,
                 piloto.getNome()
         );

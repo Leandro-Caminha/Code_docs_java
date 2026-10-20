@@ -22,18 +22,18 @@ public class Lanche {
 
         Scanner entrada = new Scanner(System.in);
 
-        System.out.format("Digite o numero de lanches:");
+        System.out.print("Digite o numero de lanches: ");
         int lanche1 = entrada.nextInt();
-        System.out.format("Digite o numero de lanches:");
+        System.out.print("Digite o numero de lanches: ");
         int lanche2 = entrada.nextInt();
-        System.out.format("Digite o numero de lanches:");
+        System.out.print("Digite o numero de lanches: ");
         int lanche3 = entrada.nextInt();
 
         int soma = lanche1 + lanche2 + lanche3;
         int media = soma / 3;
 
-        System.out.format("O numero total de lanches = %d", soma);
-        System.out.format("A media de lanches = %d", media);
+        System.out.printf("O numero total de lanches = %d%n", soma);
+        System.out.printf("A media de lanches = %d", media);
 
         entrada.close();
     }

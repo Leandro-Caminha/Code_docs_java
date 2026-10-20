@@ -14,6 +14,6 @@ public class Lontra extends Mamifero {
     // Métodos
     @Override
     public void emitirSom() {
-        System.out.format("Uhuhuhuhuhu...%n%n");
+        System.out.println("Uhuhuhuhuhu...%n%n");
     }
 }

@@ -1,5 +1,5 @@
 /*
-Exercício 6 – Mario br.inatel.exmariokart.kart.Kart!
+Exercício 06 – Mario br.inatel.exmariokart.kart.Kart!
 Crie Classes em Java que atendam a especificação UML abaixo;
 Em seguida crie ao menos dois objetos de cada, os relacione;
 Os métodos devem apenas imprimir suas ações;

@@ -1,5 +1,5 @@
 /*
-Exercício 5 – Jogo!
+Exercício 05 – Jogo!
 -Crie Classes em Java que atendam a seguinte especificação
 -Cada vez que o personagem toma dano ele perde 5 pontos de vida;
 -Cada vez que usa a arma, ela perde 2 pontos de resistência
@@ -49,28 +49,28 @@ public class Main {
         personagem2.setPontos(100);
         personagem2.setArma(arma2);
 
-        System.out.format("Personagem %s tomou dano.%n", personagem1.getNome());
+        System.out.printf("Personagem %s tomou dano.%n", personagem1.getNome());
         personagem1.tomarDano();
-        System.out.format("Personagem %s tomou dano com a arma %s.%n%n",
+        System.out.printf("Personagem %s tomou dano com a arma %s.%n%n",
                 personagem1.getNome(),
                 arma1.getNome()
         );
         personagem1.usarArma();
         personagem1.getArma().mostrarInfoArma();
-        System.out.format("Personagem %s tem %d ponto(s).%n%n",
+        System.out.printf("Personagem %s tem %d ponto(s).%n%n",
                 personagem1.getNome(),
                 personagem1.getPontos()
         );
 
-        System.out.format("Personagem %s tomou dano.%n", personagem2.getNome());
+        System.out.printf("Personagem %s tomou dano.%n", personagem2.getNome());
         personagem2.tomarDano();
-        System.out.format("Personagem %s tomou dano com a arma %s.%n%n",
+        System.out.printf("Personagem %s tomou dano com a arma %s.%n%n",
                 personagem2.getNome(),
                 arma2.getNome()
         );
         personagem2.usarArma();
         personagem2.getArma().mostrarInfoArma();
-        System.out.format("Personagem %s tem %d ponto(s).%n%n",
+        System.out.printf("Personagem %s tem %d ponto(s).%n%n",
                 personagem2.getNome(),
                 personagem2.getPontos()
         );

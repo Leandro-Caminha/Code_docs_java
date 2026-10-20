@@ -16,17 +16,17 @@ public class Brownie {
 
     // Métodos
     public void addCarrinhoDeCompras() {
-        System.out.format("Adicionado no carrinho: %s\n", nome);
+        System.out.printf("Adicionado no carrinho: %s%n", this.nome);
     }
 
     public void calculaValorTotalCompra() {
-        System.out.format("Nome: %s\n", nome);
-        System.out.format("Preço: %.2f\n\n", preco);
+        System.out.printf("Nome: %s%n", this.nome);
+        System.out.printf("Preço: %.2f%n%n", this.preco);
     }
 
     public void mostraInfo() {
-        System.out.format("Nome: %s\n", nome);
-        System.out.format("Preço: %.2f\n", preco);
-        System.out.format("Sabor: %s\n\n", sabor);
+        System.out.printf("Nome: %s%n", this.nome);
+        System.out.printf("Preço: %.2f%n", this.preco);
+        System.out.printf("Sabor: %s%n%n", this.sabor);
     }
 }

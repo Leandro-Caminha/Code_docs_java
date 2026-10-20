@@ -1,5 +1,5 @@
 /*
-Exercício 6 – Adivinhação Aprimorado!
+Exercício 06 – Adivinhação Aprimorado!
 Repita o exercício anterior, mas informe o usuário se o número que ele digitou é maior ou menor.
 Que o gerado pelo computador!
 */
@@ -25,11 +25,11 @@ public class AdivinhacaoAprimorada {
             System.out.format("Qual numero foi gerado de 1 a 10: ");
             input_user = input.nextInt();
             if (input_user == input_system) {
-                System.out.format("***ACERTOU***");
+                System.out.println("***ACERTOU***");
             } else if (input_user < input_system) {
-                System.out.format("***ERROU - NUMERO MENOR QUE O GERADO PELO COMPUTADOR***");
+                System.out.println("***ERROU - NUMERO MENOR QUE O GERADO PELO COMPUTADOR***");
             } else {
-                System.out.format("***ERROU - NUMERO MAIOR QUE O GERADO PELO COMPUTADOR***");
+                System.out.println("***ERROU - NUMERO MAIOR QUE O GERADO PELO COMPUTADOR***");
             }
         } while (input_system != input_user);
         input.close();

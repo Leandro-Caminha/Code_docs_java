@@ -14,6 +14,6 @@ public class Boi extends Mamifero {
     // Métodos
     @Override
     public void emitirSom() {
-        System.out.format("Hummmmm...Hummmmmm...%n%n");
+        System.out.println("Hummmmm...Hummmmmm...%n%n");
     }
 }

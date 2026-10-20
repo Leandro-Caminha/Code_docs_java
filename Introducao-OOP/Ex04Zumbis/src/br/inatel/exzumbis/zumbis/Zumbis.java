@@ -32,11 +32,11 @@ public class Zumbis {
         if (vida >= quantia) {
             vida -= quantia;
             zumbiAlvo.vida += quantia;
-            System.out.format("***VIDA TRANSFERIDA COM SUCESSO***");
+            System.out.println("***VIDA TRANSFERIDA COM SUCESSO***");
             return true;
         }
         else {
-            System.out.format("***VIDA INSUFICIENTE***");
+            System.out.println("***VIDA INSUFICIENTE***");
             return false;
         }
     }

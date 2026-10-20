@@ -21,22 +21,22 @@ public class Main {
         zumbi_2.setNome("Lele");
         zumbi_2.setVida(100);
 
-        System.out.format("Vida do zumbi %s = %.2f%n",
+        System.out.printf("Vida do zumbi %s = %.2f%n",
                 zumbi_1.getNome(),
                 zumbi_1.mostrarVida()
         );
-        System.out.format("Vida do zumbi %s = %.2f%n",
+        System.out.printf("Vida do zumbi %s = %.2f%n",
                 zumbi_2.getNome(),
                 zumbi_2.mostrarVida()
         );
 
         zumbi_1.transfereVida(zumbi_2, 85);
 
-        System.out.format("Vida do zumbi %s = %.2f%n",
+        System.out.printf("Vida do zumbi %s = %.2f%n",
                 zumbi_1.getNome(),
                 zumbi_1.mostrarVida()
         );
-        System.out.format("Vida do zumbi %s = %.2f%n",
+        System.out.printf("Vida do zumbi %s = %.2f%n",
                 zumbi_2.getNome(),
                 zumbi_2.mostrarVida()
         );
