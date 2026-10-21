@@ -15,7 +15,7 @@ public class Bloco {
 
     // Métodos
     public void getContBlocos() {
-        System.out.format("Total de blocos criados: %d%n", contBlocos);
+        System.out.printf("Total de blocos criados: %d%n", contBlocos);
     }
 
     public void setContBlocosDestruidos() {
@@ -23,6 +23,6 @@ public class Bloco {
     }
 
     public void getContBlocosDestruidos() {
-        System.out.format("Total de blocos destruídos: %d%n", contBlocosDestruidos);
+        System.out.printf("Total de blocos destruídos: %d%n", contBlocosDestruidos);
     }
 }

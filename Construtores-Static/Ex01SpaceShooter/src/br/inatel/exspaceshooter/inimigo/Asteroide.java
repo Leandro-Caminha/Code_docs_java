@@ -15,7 +15,7 @@ public class Asteroide {
 
     // Métodos
     public void destruir() {
-        System.out.format("Asteroide chamado %s de tipo %s destruído%n",
+        System.out.printf("Asteroide chamado %s de tipo %s destruído%n",
                 this.nome,
                 this.tipoAsteroide
         );

@@ -15,7 +15,7 @@ public class Jogador {
 
     // Métodos
     public void destruirBloco(String jogador, Bloco bloco) {
-        System.out.format("O %s destruiu um bloco%n%n", jogador);
+        System.out.printf("O %s destruiu um bloco%n%n", jogador);
         bloco.setContBlocosDestruidos();
         this.pontos++;
     }

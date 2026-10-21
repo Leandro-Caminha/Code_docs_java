@@ -25,7 +25,7 @@ public class Nave {
         } else if (tipoTiro.equals("explosivo")) {
             asteroide.destruir();
         } else {
-            System.out.format("A nave %s de vida %.2f, não pode destruir um asteroide grande.",
+            System.out.printf("A nave %s de vida %.2f, não pode destruir um asteroide grande.",
                     this.nome,
                     this.vida
             );

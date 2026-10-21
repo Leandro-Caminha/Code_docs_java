@@ -12,6 +12,6 @@ public class ProcessarPedido {
 
     // Métodos
     public static void pedidoenviado(Promocoes[] compra_realizada) {
-            System.out.format("PEDIDO ENVIADO...%n%n");
+            System.out.println("PEDIDO ENVIADO...%n%n");
         }
 }

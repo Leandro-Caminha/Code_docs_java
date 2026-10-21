@@ -22,7 +22,7 @@ public class Jogo {
     public void iniciarJogo() {
         Scanner entrada = new Scanner(System.in);
 
-        System.out.format("Digite o nome do jogador: ");
+        System.out.print("Digite o nome do jogador: ");
         String nomeJogador = entrada.nextLine();
         jogador.setNome(nomeJogador);
 
@@ -33,30 +33,30 @@ public class Jogo {
         System.out.format("================================%n");
         System.out.format("===     CAMPO MINADO 2x2     ===%n");
         System.out.format("================================%n");
-        System.out.format("Jogador: %s%n", jogador.getNome());
+        System.out.printf("Jogador: %s%n", jogador.getNome());
 
         while (quantidadePosicoesVisitadas < 4) {
             int linha;
             int coluna;
 
             do {
-                System.out.format("Digite a linha (0 ou 1): ");
+                System.out.print("Digite a linha (0 ou 1): ");
                 linha = entrada.nextInt();
                 if (linha != 0 && linha != 1) {
-                    System.out.format("Linha inválida! Digite somente 0 ou 1.%n");
+                    System.out.println("Linha inválida! Digite somente 0 ou 1.");
                 }
             } while (linha != 0 && linha != 1);
 
             do {
-                System.out.format("Digite a coluna (0 ou 1): ");
+                System.out.print("Digite a coluna (0 ou 1): ");
                 coluna = entrada.nextInt();
                 if (coluna != 0 && coluna != 1) {
-                    System.out.format("Coluna inválida! Digite somente 0 ou 1.%n");
+                    System.out.println("Coluna inválida! Digite somente 0 ou 1.");
                 }
             } while (coluna != 0 && coluna != 1);
 
             if (posicoesVisitadas[linha][coluna]) {
-                System.out.format("Você já verificou essa posição!%n");
+                System.out.println("Você já verificou essa posição!");
                 continue;
             } else {
                 posicoesVisitadas[linha][coluna] = true;
@@ -64,18 +64,18 @@ public class Jogo {
                 quantidadePosicoesVisitadas++;
 
                 if (campo.possuiBomba(linha, coluna)) {
-                    System.out.format(campo.getMensagem(1), "%n");
+                    System.out.printf(campo.getMensagem(1), "%n");
                 } else {
-                    System.out.format(campo.getMensagem(0), "%n");
+                    System.out.printf(campo.getMensagem(0), "%n");
                 }
             }
 
-            System.out.format("Posições visitadas: %d/4%n", quantidadePosicoesVisitadas);
+            System.out.printf("Posições visitadas: %d/4%n", quantidadePosicoesVisitadas);
         }
 
-        System.out.format("================================%n");
-        System.out.format("=== CAMPO MINADO PERCORRIDO! ===%n");
-        System.out.format("================================%n");
+        System.out.println("================================");
+        System.out.println("=== CAMPO MINADO PERCORRIDO! ===");
+        System.out.println("================================");
 
         entrada.close();
     }
