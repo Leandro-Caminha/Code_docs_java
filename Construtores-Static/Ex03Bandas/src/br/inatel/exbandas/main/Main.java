@@ -58,8 +58,28 @@ Especificação UML:
 // Packages
 package br.inatel.exbandas.main;
 
+// Imports
+import br.inatel.exbandas.banda.Banda;
+import br.inatel.exbandas.empresario.Empresario;
+import br.inatel.exbandas.membro.Membro;
+import br.inatel.exbandas.musica.Musica;
+
+import java.lang.reflect.MalformedParametersException;
+import java.lang.reflect.Member;
+
 public class Main {
     public static void main(String[] args) {
+
+        Banda banda = new Banda("Irradia Samba", "Samba");
+        Empresario empresario = new Empresario("Leandro Caminha", 12345678901000L);
+
+        Membro membro1 = new Membro("Leandro", "Cavaquinho");
+        Membro membro2 = new Membro("Lele", "Violão");
+
+        Musica musica1 = new Musica("Deixa Acontecer", 3.50);
+        Musica musica2 = new Musica("Faixa Amarela", 3.30);
+
+        banda.setEmpresario(empresario);
 
 
         }
